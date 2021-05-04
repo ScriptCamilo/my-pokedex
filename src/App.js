@@ -11,9 +11,8 @@ class App extends Component {
         <header id="app-header">
           <h1>POKEMON</h1>
         </header>
-        <main id="app-main">
-          <Pokedex pokemons={pokemons} />
-        </main>
+        
+        <Pokedex pokemons={pokemons} />
       </div>
     );
   }

@@ -9,7 +9,8 @@
 
 #app-main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pokedex {
@@ -17,6 +18,13 @@
   width: 80%;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.pageButton {
+  margin: 20px;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
 }
 
 .pokemon {
