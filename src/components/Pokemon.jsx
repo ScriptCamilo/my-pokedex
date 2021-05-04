@@ -17,8 +17,10 @@ class Pokemon extends Component {
         </figure>
 
         <section className="card-description">
-          <span className='type'>{type}</span>
-          <span className='weight'>{averageWeight.value}{averageWeight.measurementUnit}</span>
+          <p>Type: <span className='type'>{type}</span></p>
+          <p>Average Weight: 
+            <span className='weight'> {averageWeight.value} {averageWeight.measurementUnit}</span>
+          </p>
         </section>
       </li>
     )

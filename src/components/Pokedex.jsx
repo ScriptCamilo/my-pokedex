@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Pokemon from './Pokemon';
+import ElementButton from './ElementButton';
 
 class Pokedex extends Component {
   constructor() {
@@ -32,7 +33,14 @@ class Pokedex extends Component {
     const { pokemonPage } = this.state;
     const { pokemons } = this.props;
     const pokemon = pokemons[pokemonPage]
-    
+    const elements = pokemons.reduce((array, { type }) => {
+      if (array.includes(type)) {
+        return array;
+      }
+      array.push(type);
+      return array;
+    }, []);
+
     return (
       <main id="app-main">
         <ul className="pokedex">
@@ -41,8 +49,14 @@ class Pokedex extends Component {
         </ul>
 
         <section id="buttons">
-          <button className="pageButton" onClick={this.changePage}>Previous</button>
-          <button className="pageButton" onClick={this.changePage}>Next</button>
+          <div id="element-buttons">
+            {elements.map((type) => <ElementButton key={type} type={type} />)}
+          </div>
+
+          <div id="page-buttons">
+            <button className="page-button" onClick={this.changePage}>Previous</button>
+            <button className="page-button" onClick={this.changePage}>Next</button>
+          </div>
         </section>
       </main>
     );
