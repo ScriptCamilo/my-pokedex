@@ -7,9 +7,13 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-    <div className="App">
-      <Pokedex pokemons={pokemons} />
-    </div>
+      <div className="App">
+        <header id="app-header">
+          <h1>POKEMON</h1>
+        </header>
+        
+        <Pokedex pokemons={pokemons} />
+      </div>
     );
   }
 }
