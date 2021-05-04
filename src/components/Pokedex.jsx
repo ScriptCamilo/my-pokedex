@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 import Pokemon from './Pokemon';
 import ElementButton from './ElementButton';
 
+import '../styles/Pokedex.css';
+
 class Pokedex extends Component {
   constructor() {
-    super()
+    super();
 
     this.changePage = this.changePage.bind(this);
 
