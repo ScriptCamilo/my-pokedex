@@ -20,11 +20,11 @@ class Pokedex extends Component {
 
     if (event.textContent.toLowerCase() === 'next') {
       return this.setState(({ pokemonPage }, _props) => ({
-        pokemonPage: pokemonPage < pageLength ? pokemonPage + 1 : pageLength,
+        pokemonPage: pokemonPage < pageLength ? pokemonPage + 1 : 0,
       }))
     }
     return this.setState(({ pokemonPage }, _props) => ({
-      pokemonPage: pokemonPage > 0 ? pokemonPage - 1 : 0,
+      pokemonPage: pokemonPage > 0 ? pokemonPage - 1 : pageLength,
     })) 
   }
 
